@@ -1,38 +1,144 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: #0e185f;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-app {
   display: flex;
   flex-direction: column;
+  justify-content: start;
+  width: 520px;
+  min-height: 600px;
+  background: #161a2b;
+  text-align: center;
+  margin: 128px auto;
+  border-radius: 10px;
+  padding-bottom: 32px;
+}
+
+.app{
+    width: 70%;
+    border-radius: 20px;
+    background-color: #020820;
+    padding: 50px;
+    margin: 50px auto;
+}
+
+h1 {
+    justify-content: center;
+    display: flex;
+    margin: 0 0 32px 0;
+    color: #fff;
+    font-size: 30px;
+}
+
+.complete {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+.todo-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+.todo-input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #2D31FA;
+  outline: none;
+  width: 60%;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+}
+
+.todo-input::placeholder {
+  color: #e2e2e2;
+}
+
+.todo-button {
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background: #2D31FA;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 16px;
+}
+
+.todo-input.edit {
+  border: 2px solid #F8485E;
+}
+
+.todo-button.edit {
+  background: #F8485E;
+  padding: 16px 22px;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.todo-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4px auto;
+    color: #fff;
+    background: #064663;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 90%;
+}
+
+.row-text{
+    padding: 16px;
+}
+
+.todo-row:nth-child(4n + 1) {
+  background: #7B113A;
+}
+
+.todo-row:nth-child(4n + 2) {
+  background: #041562;
+}
+
+.todo-row:nth-child(4n + 3) {
+  background: #21094E;
+}
+
+.icons {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 24px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.delete-icon {
+  color: #fff;
+  background-color: #B33030;
+  height: 2.5em;
+  width: 2.5em;
+  padding: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.edit-icon {
+  color: #fff;
+  background-color: #19282F;
+  height: 2.5em;
+  width: 2.5em;
+  padding: 17px;
 }
